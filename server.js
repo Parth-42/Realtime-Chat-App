@@ -26,7 +26,7 @@ io.on('connection', socket=>{
         socket.join(user.room);
 
         //Welcome current user
-        socket.emit('message', formatMessage(bot, 'Welcome to ChatCord'));
+        socket.emit('message', formatMessage(bot, 'Welcome to LeetChat'));
 
         //broadcast when a user connects
         socket.broadcast.to(user.room).emit('message', formatMessage(bot, `${user.username} has joined the chat.`));

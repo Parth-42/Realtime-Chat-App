@@ -1,9 +1,9 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
 
 :root {
-	--dark-color-a: #667aff;
-	--dark-color-b: #7386ff;
-	--light-color: #e6e9ff;
+	--dark-color-a: #0f4c75;
+	--dark-color-b: #3282b8;
+	--light-color: #bbe1fa;
 	--success-color: #5cb85c;
 	--error-color: #d9534f;
 }
@@ -19,6 +19,11 @@ body {
 	font-size: 16px;
 	background: var(--light-color);
 	margin: 20px;
+	background-image: url("./Liquid-Cheese.svg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: initial;
+	height: calc(100vh - 3.2em);
 }
 
 ul {
@@ -29,13 +34,20 @@ a {
 	text-decoration: none;
 }
 
+textarea:focus,
+input:focus {
+	outline: none;
+}
+
 .btn {
 	cursor: pointer;
 	padding: 5px 15px;
 	background: var(--light-color);
 	color: var(--dark-color-a);
 	border: 0;
-	font-size: 17px;
+	font-size: 1.2em;
+	font-weight: bold;
+	border-radius: 5px;
 }
 
 /* Chat Page */
@@ -45,13 +57,12 @@ a {
 	background: #fff;
 	margin: 30px auto;
 	overflow: hidden;
+	border-radius: 5px;
 }
 
 .chat-header {
 	background: var(--dark-color-a);
 	color: #fff;
-	border-top-left-radius: 5px;
-	border-top-right-radius: 5px;
 	padding: 15px;
 	display: flex;
 	align-items: center;
@@ -124,6 +135,9 @@ a {
 	padding: 5px;
 	height: 40px;
 	flex: 1;
+	border-top-left-radius: 3px;
+	border-bottom-left-radius: 3px;
+	border: none;
 }
 
 /* Join Page */
@@ -137,13 +151,15 @@ a {
 	text-align: center;
 	padding: 20px;
 	background: var(--dark-color-a);
-	border-top-left-radius: 5px;
-	border-top-right-radius: 5px;
+	border-radius: 3px;
+	margin-bottom: 3px;
 }
 
 .join-main {
 	padding: 30px 40px;
 	background: var(--dark-color-b);
+	box-shadow: 0.1px 0.1px 10px 1px rgb(50, 103, 153);
+	border-radius: 3px;
 }
 
 .join-main p {
@@ -164,6 +180,8 @@ a {
 	padding: 5px;
 	height: 40px;
 	width: 100%;
+	border-radius: 3px;
+	border: none;
 }
 
 .join-main select {
@@ -171,11 +189,20 @@ a {
 	padding: 5px;
 	height: 40px;
 	width: 100%;
+	border-radius: 3px;
+	border: none;
 }
 
 .join-main .btn {
 	margin-top: 20px;
 	width: 100%;
+	border-radius: 3px;
+	border: none;
+}
+
+#send {
+	border-top-left-radius: 0px;
+	border-bottom-left-radius: 0px;
 }
 
 @media (max-width: 700px) {
